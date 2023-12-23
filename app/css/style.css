@@ -1,0 +1,58 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import 'theme.css';
+
+
+@layer utilities {
+    .rtl {
+        direction: rtl;
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .typography-brand-body-l-caps {
+        font-family: var(--font-geom-graphic),Helvetica;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 1.6px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .interactive-text {
+        transition-property: color,background-color,border-color,text-decoration-color,fill,stroke;
+        transition-timing-function: cubic-bezier(.4,0,.2,1);
+        transition-duration: .15s;
+    }
+    .transition-colors {
+        transition-property: color,background-color,border-color,text-decoration-color,fill,stroke;
+        transition-timing-function: cubic-bezier(.4,0,.2,1);
+        transition-duration: .15s;
+    }
+    .border-camo-500 {
+        border-color: rgb(64,72,51);
+    }
+    .bg-camo-500 {
+        background-color: rgb(64,72,51);
+    }
+    .border-camo-300 {
+        border-color: rgb(155,168,133);
+    }
+    .bg-camo-300 {
+        background-color: rgb(155,168,133);
+    }
+    .drop-shadow-glow-sm-yellow-300 {
+        box-shadow: 0px 0px 14px rgb(252 252 3/0.40);
+        --tw-drop-shadow: drop-shadow(0px 0px 14px rgb(252 252 3/0.40));
+    }
+    .blur, .drop-shadow-glow-sm-yellow-300 {
+        filter: rgb(252,252,3) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) drop-shadow(0px 0px 14px rgb(252 252 3/0.40));
+    }
+}
